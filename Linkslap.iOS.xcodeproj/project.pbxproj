@@ -14,6 +14,16 @@
 		52A8FCFF19A7BA4600EFE697 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52A8FCFD19A7BA4600EFE697 /* Main.storyboard */; };
 		52A8FD0119A7BA4600EFE697 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52A8FD0019A7BA4600EFE697 /* Images.xcassets */; };
 		52A8FD0D19A7BA4600EFE697 /* Linkslap_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8FD0C19A7BA4600EFE697 /* Linkslap_iOSTests.swift */; };
+		52A8FD1919A7BA8A00EFE697 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8FD1819A7BA8A00EFE697 /* UserInfo.swift */; };
+		52A8FD1B19A7BBF000EFE697 /* SubscriptionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8FD1A19A7BBF000EFE697 /* SubscriptionSettings.swift */; };
+		52A8FD1D19A7BC5B00EFE697 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8FD1C19A7BC5B00EFE697 /* Subscription.swift */; };
+		52A8FD4819A7BDEE00EFE697 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8FD4719A7BDEE00EFE697 /* Stream.swift */; };
+		52A8FD4A19A7BE2900EFE697 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8FD4919A7BE2900EFE697 /* RegisterModel.swift */; };
+		52A8FD4C19A7BE6600EFE697 /* PushRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8FD4B19A7BE6600EFE697 /* PushRegistration.swift */; };
+		52A8FD4E19A7BEE600EFE697 /* LinkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8FD4D19A7BEE600EFE697 /* LinkModel.swift */; };
+		52A8FD5019A7BF2900EFE697 /* LInk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8FD4F19A7BF2900EFE697 /* LInk.swift */; };
+		52A8FD5219A7BF9200EFE697 /* GifMeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8FD5119A7BF9200EFE697 /* GifMeModel.swift */; };
+		52A8FD5419A7C0DF00EFE697 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8FD5319A7C0DF00EFE697 /* Account.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +48,16 @@
 		52A8FD0619A7BA4600EFE697 /* Linkslap.iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Linkslap.iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A8FD0B19A7BA4600EFE697 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52A8FD0C19A7BA4600EFE697 /* Linkslap_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Linkslap_iOSTests.swift; sourceTree = "<group>"; };
+		52A8FD1819A7BA8A00EFE697 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		52A8FD1A19A7BBF000EFE697 /* SubscriptionSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionSettings.swift; sourceTree = "<group>"; };
+		52A8FD1C19A7BC5B00EFE697 /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		52A8FD4719A7BDEE00EFE697 /* Stream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
+		52A8FD4919A7BE2900EFE697 /* RegisterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
+		52A8FD4B19A7BE6600EFE697 /* PushRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushRegistration.swift; sourceTree = "<group>"; };
+		52A8FD4D19A7BEE600EFE697 /* LinkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkModel.swift; sourceTree = "<group>"; };
+		52A8FD4F19A7BF2900EFE697 /* LInk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LInk.swift; sourceTree = "<group>"; };
+		52A8FD5119A7BF9200EFE697 /* GifMeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifMeModel.swift; sourceTree = "<group>"; };
+		52A8FD5319A7C0DF00EFE697 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +81,7 @@
 		52A8FCE719A7BA4500EFE697 = {
 			isa = PBXGroup;
 			children = (
+				52A8FD1619A7BA5500EFE697 /* Linkslap.iOS.Communication */,
 				52A8FCF219A7BA4500EFE697 /* Linkslap.iOS */,
 				52A8FD0919A7BA4600EFE697 /* Linkslap.iOSTests */,
 				52A8FCF119A7BA4500EFE697 /* Products */,
@@ -113,6 +134,39 @@
 				52A8FD0B19A7BA4600EFE697 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		52A8FD1619A7BA5500EFE697 /* Linkslap.iOS.Communication */ = {
+			isa = PBXGroup;
+			children = (
+				52A8FD5519A7C12B00EFE697 /* Interfaces */,
+				52A8FD1719A7BA7200EFE697 /* Models */,
+			);
+			name = Linkslap.iOS.Communication;
+			sourceTree = "<group>";
+		};
+		52A8FD1719A7BA7200EFE697 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52A8FD1819A7BA8A00EFE697 /* UserInfo.swift */,
+				52A8FD1A19A7BBF000EFE697 /* SubscriptionSettings.swift */,
+				52A8FD1C19A7BC5B00EFE697 /* Subscription.swift */,
+				52A8FD4719A7BDEE00EFE697 /* Stream.swift */,
+				52A8FD4919A7BE2900EFE697 /* RegisterModel.swift */,
+				52A8FD4B19A7BE6600EFE697 /* PushRegistration.swift */,
+				52A8FD4D19A7BEE600EFE697 /* LinkModel.swift */,
+				52A8FD4F19A7BF2900EFE697 /* LInk.swift */,
+				52A8FD5119A7BF9200EFE697 /* GifMeModel.swift */,
+				52A8FD5319A7C0DF00EFE697 /* Account.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		52A8FD5519A7C12B00EFE697 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Interfaces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,7 +271,17 @@
 				52A8FCF819A7BA4600EFE697 /* RootViewController.swift in Sources */,
 				52A8FCFC19A7BA4600EFE697 /* ModelController.swift in Sources */,
 				52A8FCFA19A7BA4600EFE697 /* DataViewController.swift in Sources */,
+				52A8FD5219A7BF9200EFE697 /* GifMeModel.swift in Sources */,
+				52A8FD4819A7BDEE00EFE697 /* Stream.swift in Sources */,
+				52A8FD1B19A7BBF000EFE697 /* SubscriptionSettings.swift in Sources */,
+				52A8FD1D19A7BC5B00EFE697 /* Subscription.swift in Sources */,
+				52A8FD4C19A7BE6600EFE697 /* PushRegistration.swift in Sources */,
+				52A8FD5019A7BF2900EFE697 /* LInk.swift in Sources */,
+				52A8FD4E19A7BEE600EFE697 /* LinkModel.swift in Sources */,
+				52A8FD1919A7BA8A00EFE697 /* UserInfo.swift in Sources */,
 				52A8FCF619A7BA4500EFE697 /* AppDelegate.swift in Sources */,
+				52A8FD4A19A7BE2900EFE697 /* RegisterModel.swift in Sources */,
+				52A8FD5419A7C0DF00EFE697 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
