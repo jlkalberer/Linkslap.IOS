@@ -21,6 +21,7 @@
 		5208940819B6991A007E4EEF /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5208940219B6991A007E4EEF /* UserInfo.swift */; };
 		5208940A19B6B8F1007E4EEF /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5208940919B6B8F0007E4EEF /* Settings.swift */; };
 		5208940C19B6B8F1007E4EEF /* SubscriptionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5208940B19B6B8F1007E4EEF /* SubscriptionSettings.swift */; };
+		5208941119B6D0D9007E4EEF /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5208941019B6D0D9007E4EEF /* AppSettings.swift */; };
 		528CAA1419B6681700FD358E /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528CAA1319B6681700FD358E /* Promise.swift */; };
 		528CAA1619B66FB000FD358E /* AccountStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528CAA1519B66FB000FD358E /* AccountStoreProtocol.swift */; };
 		528CAA1C19B670A600FD358E /* StreamStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528CAA1B19B670A600FD358E /* StreamStoreProtocol.swift */; };
@@ -66,6 +67,7 @@
 		5208940219B6991A007E4EEF /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfo.swift; path = LInkslap.iOS.Communication/Models/UserInfo.swift; sourceTree = "<group>"; };
 		5208940919B6B8F0007E4EEF /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = LInkslap.iOS.Communication/Models/Settings.swift; sourceTree = "<group>"; };
 		5208940B19B6B8F1007E4EEF /* SubscriptionSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriptionSettings.swift; path = LInkslap.iOS.Communication/Models/SubscriptionSettings.swift; sourceTree = "<group>"; };
+		5208941019B6D0D9007E4EEF /* AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppSettings.swift; path = LInkslap.iOS.Communication/Util/AppSettings.swift; sourceTree = "<group>"; };
 		528CAA1319B6681700FD358E /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Promise.swift; path = Promises/Promise.swift; sourceTree = "<group>"; };
 		528CAA1519B66FB000FD358E /* AccountStoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountStoreProtocol.swift; path = LInkslap.iOS.Communication/Protocols/AccountStoreProtocol.swift; sourceTree = "<group>"; };
 		528CAA1B19B670A600FD358E /* StreamStoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StreamStoreProtocol.swift; path = LInkslap.iOS.Communication/Protocols/StreamStoreProtocol.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 		520893F719B69230007E4EEF /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				5208941019B6D0D9007E4EEF /* AppSettings.swift */,
 				520893F819B6925E007E4EEF /* CoreDataStore.swift */,
 				528CAA2C19B6789900FD358E /* Storage.swift */,
 				520893FA19B692B0007E4EEF /* CoreDataHelper.swift */,
@@ -346,6 +349,7 @@
 				528CAA1C19B670A600FD358E /* StreamStoreProtocol.swift in Sources */,
 				52A8FCF819A7BA4600EFE697 /* RootViewController.swift in Sources */,
 				520893BE19B68E07007E4EEF /* Stream.swift in Sources */,
+				5208941119B6D0D9007E4EEF /* AppSettings.swift in Sources */,
 				52A8FCFC19A7BA4600EFE697 /* ModelController.swift in Sources */,
 				528CAA2219B673E700FD358E /* SettingsStoreProtocol.swift in Sources */,
 				528CAA1419B6681700FD358E /* Promise.swift in Sources */,

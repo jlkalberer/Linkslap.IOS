@@ -111,15 +111,16 @@ internal class CoreDataHelper: NSObject{
         
         return output[0]
     }
-    /*
-    internal func deleteAll<TModel : NSManagedObject>(models : [TModel]) {
+    
+    internal func delete<TModel : NSManagedObject>(model : TModel) {
+        backgroundContext?.deleteObject(model)
+    }
+    
+    internal func clear(tableName: NSString) {
+        let models : [NSManagedObject] = all(tableName)
         for model in models {
             backgroundContext?.deleteObject(model)
         }
-    }
-    */
-    internal func delete<TModel : NSManagedObject>(model : TModel) {
-        backgroundContext?.deleteObject(model)
     }
     
     func saveContext () {

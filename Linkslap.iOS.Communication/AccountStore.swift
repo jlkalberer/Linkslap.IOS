@@ -9,8 +9,13 @@
 import Foundation
 
 public class AccountStore : AccountStoreProtocol {
+    private var cdh : CoreDataHelper = { return CoreDataHelper() }()
+    
     public func authenticate(userName : String, password : String) -> Promise<Account> {
         var promise = Promise<Account>.defer();
+        
+        var encodedUserName = userName.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLHostAllowedCharacterSet())
+        var encodedPassword = password.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLHostAllowedCharacterSet())
         
         
         
