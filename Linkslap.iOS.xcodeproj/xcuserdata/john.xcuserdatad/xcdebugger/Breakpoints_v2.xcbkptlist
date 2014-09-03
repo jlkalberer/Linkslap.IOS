@@ -25,13 +25,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Linkslap.iOS/AppDelegate.swift"
-            timestampString = "431401995.651443"
+            filePath = "LInkslap.iOS.Communication/AccountStore.swift"
+            timestampString = "431471374.875767"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "applicationDidBecomeActive(_:)"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "authenticate(_:password:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

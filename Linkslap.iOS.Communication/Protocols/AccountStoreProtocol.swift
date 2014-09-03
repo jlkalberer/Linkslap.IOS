@@ -10,7 +10,7 @@ import Foundation
 
 public protocol AccountStoreProtocol {
     func authenticate(userName : String, password : String) -> Promise<Account>
-    func get() -> Promise<Account>
+    func get() -> Account?
     func register(user : RegisterModel) -> Promise<Int>
     func logout() -> Void
     func resetPassword(email : String) -> Promise<Bool>

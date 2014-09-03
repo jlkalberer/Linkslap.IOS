@@ -28,16 +28,18 @@ import Foundation
 
 public class Promise<TModel> {
     // An array of callbacks (Void -> Void) to iterate through at resolve time.
-    var pending: [((value : TModel ) -> ())] = []
+    var pending: [((value : TModel? ) -> ())] = []
     
     // A callback to call when we're completely done.
-    var done: (value : TModel ) -> () = { value in }
+    var done: (value : TModel? ) -> () = { value in }
     
     // A callback to invoke in the event of failure.
-    var fail: (() -> ()) = {}
+    var fail: ((error: NSError) -> ()) = { error in }
     
     // A simple way to track rejection.
     var rejected: Bool = false
+    
+    var error: NSError?
     
     // Class ("static") method to return a new promise.
     class func defer() -> Promise {
@@ -50,36 +52,38 @@ public class Promise<TModel> {
     // invoking each in sequence.
     //
     // Invokes fail callback in case of rejection (and swiftly abandons ship).
-    func resolve() -> ((value : TModel) -> ()) {
-        func resolve(value: TModel) -> () {
+    func resolve(value : TModel?) -> () {
+        func callResolve(value: TModel?) -> () {
             for f in self.pending {
                 if self.rejected {
-                    fail()
+                    fail(error: self.error!)
                     return
                 }
                 f(value: value)
             }
             if self.rejected {
-                fail()
+                fail(error: self.error!)
                 return
             }
             done(value: value)
         }
-        return resolve
+
+        callResolve(value)
     }
     
     // Reject method.
     //
     // Sets rejection flag to true to halt execution of subsequent callbacks.
-    func reject() -> () {
+    func reject(error:NSError) {
         self.rejected = true
+        self.error = error
     }
     
     // Then method.
     //
     // This lets us chain callbacks together; it accepts one parameter, a Void -> Void
     // callback - can either be a function itself, or a Swift closure.
-    func then(callback: ((value: TModel) -> ())) -> Promise {
+    func then(callback: ((value: TModel?) -> ())) -> Promise {
         self.pending.append(callback)
         return self
     }
@@ -96,8 +100,8 @@ public class Promise<TModel> {
     // This allows users of our Promise library to have access to the Promise object,
     // so that they can reject a Promise within their then() clauses. Not the cleanest
     // way, but hey, this whole thing is a proof of concept, right? :)
-    func then(callback: ((promise: Promise) -> ())) -> Promise {
-        func thenWrapper(value : TModel) -> () {
+    func then(callback: ((promise: Promise<TModel>) -> ())) -> Promise<TModel> {
+        func thenWrapper(value : TModel?) -> () {
             callback(promise: self)
         }
         self.pending.append(thenWrapper)
@@ -115,7 +119,7 @@ public class Promise<TModel> {
     //
     // promise.then({}).fail({}).then({}).fail({})
     //
-    func fail(fail: (() -> ())) -> Promise {
+    func fail(fail: ((error:NSError) -> ())) -> Promise {
         self.fail = fail
         let finishablePromise : Promise = self
         return finishablePromise
@@ -125,7 +129,7 @@ public class Promise<TModel> {
     //
     // This lets us specify a done() callback to be invoked at the end of a set
     // of then() clauses (provided the promise hasn't been rejected).
-    func done(done: ((value : TModel) -> ())) -> () {
+    func done(done: ((value : TModel?) -> ())) -> () {
         self.done = done
     }
 }

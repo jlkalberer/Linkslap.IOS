@@ -9,5 +9,5 @@
 import Foundation
 
 public protocol GifStoreProtocol {
-    func search(query : String, nswf : Bool, page : Int) -> Promise<GifMeModel>
+    func search(query : String, nsfw : Bool, page : Int) -> Promise<GifMeModel>
 }

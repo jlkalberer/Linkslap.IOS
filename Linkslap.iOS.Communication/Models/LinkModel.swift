@@ -9,8 +9,11 @@
 import Foundation
 
 public class LinkModel {
-    public var streamKey : String?
-    public var url : String?
-    public var connectionId : String?
-    public var comment : String?
+    var id: NSNumber?
+    var streamName: String?
+    var streamKey: String?
+    var url: String?
+    var comment: String?
+    var createdDate: NSDate?
+    var userName: String?
 }

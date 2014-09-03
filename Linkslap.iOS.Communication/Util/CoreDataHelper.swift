@@ -75,12 +75,12 @@ internal class CoreDataHelper: NSObject{
     }
     
     internal func create<TModel : NSManagedObject>(tableName : NSString) -> TModel {
-        var entity = NSEntityDescription.entityForName(tableName, inManagedObjectContext: backgroundContext);
-        return TModel(entity : entity, insertIntoManagedObjectContext : backgroundContext)
+        var entity = NSEntityDescription.entityForName(tableName, inManagedObjectContext: backgroundContext!);
+        return TModel(entity : entity!, insertIntoManagedObjectContext : backgroundContext!)
     }
     
     internal func add<TModel>(tableName : NSString, model : TModel) -> TModel {
-        return NSEntityDescription.insertNewObjectForEntityForName(tableName, inManagedObjectContext: backgroundContext) as TModel
+        return NSEntityDescription.insertNewObjectForEntityForName(tableName, inManagedObjectContext: backgroundContext!) as TModel
     }
     
     internal func all<TModel>(tableName : NSString) -> [TModel] {
@@ -95,7 +95,7 @@ internal class CoreDataHelper: NSObject{
         
         var output : [TModel] = [];
         
-        for item : AnyObject in result {
+        for item in result! {
             output.append(item as TModel)
         }
         

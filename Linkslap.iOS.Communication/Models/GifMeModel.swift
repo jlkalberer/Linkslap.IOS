@@ -9,10 +9,39 @@
 
 import Foundation
 
-public class GifMeModel {
+public class GifMeModel: SerializableProtocol {
+    public required init() { }
+    
     public var status : Int = 0
-    public var meta : GifMeMeta?
-    public var results : [GifMeResult]?
+    public var meta : GifMeMeta
+    public var results : [GifMeResult]
+    
+    public func fromJson(json: JSON) {
+        status = json["status"].asInt ?? 0
+        meta = GifMeMeta()
+        meta.term = json["meta"]["term"].asString
+        meta.limit = json["meta"]["limit"].asInt ?? 0
+        meta.page = json["meta"]["page"].asInt ?? 0
+        meta.totalPages = json["meta"]["total_pages"].asInt ?? 0
+        meta.total = json["meta"]["total"].asInt ?? 0
+        meta.timing = json["meta"]["timing"].asString
+        
+        var resultsArray = json["data"].asArray;
+        
+        if (resultsArray == nil) {
+            return
+        }
+        
+        for jsonResult in resultsArray! {
+            var result = GifMeResult()
+            result.id = jsonResult["id"].asInt ?? 0
+            result.score = jsonResult["score"].asString
+            result.nsfw = jsonResult["nsfw"].asBool ?? false
+            result.link = jsonResult["link"].asString
+            result.thumb = jsonResult["thumb"].asString
+            result.createdAt = jsonResult["created_at"].asDate
+        }
+    }
     
     public class GifMeMeta {
         public var term : String?

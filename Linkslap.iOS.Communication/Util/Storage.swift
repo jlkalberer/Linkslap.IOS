@@ -44,7 +44,11 @@ public struct Storage {
         get {
             var accounts: [Account] = cdh.all(accountKey)
             
-            return accounts[0] ?? nil
+            if (accounts.count == 0) {
+                return nil
+            }
+            
+            return accounts[0]
         }
     }
     

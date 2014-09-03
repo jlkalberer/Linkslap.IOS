@@ -61,7 +61,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
         }
         
         index--
-        return self.viewControllerAtIndex(index, storyboard: viewController.storyboard)
+        return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
     }
 
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
@@ -74,7 +74,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
         if index == self.pageData.count {
             return nil
         }
-        return self.viewControllerAtIndex(index, storyboard: viewController.storyboard)
+        return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
     }
 
 }

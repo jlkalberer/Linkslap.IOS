@@ -22,6 +22,13 @@
 		5208940A19B6B8F1007E4EEF /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5208940919B6B8F0007E4EEF /* Settings.swift */; };
 		5208940C19B6B8F1007E4EEF /* SubscriptionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5208940B19B6B8F1007E4EEF /* SubscriptionSettings.swift */; };
 		5208941119B6D0D9007E4EEF /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5208941019B6D0D9007E4EEF /* AppSettings.swift */; };
+		5208941519B77343007E4EEF /* SerializableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5208941419B77343007E4EEF /* SerializableProtocol.swift */; };
+		5261257219B7BCBF006BD19D /* Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5261257119B7BCBF006BD19D /* Json.swift */; };
+		5261257619B7C82D006BD19D /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5261257319B7C82D006BD19D /* AccountModel.swift */; };
+		5261257719B7C82D006BD19D /* StreamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5261257419B7C82D006BD19D /* StreamModel.swift */; };
+		5261257819B7C82D006BD19D /* SubscriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5261257519B7C82D006BD19D /* SubscriptionModel.swift */; };
+		5261257A19B7D4FC006BD19D /* NotificationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5261257919B7D4FC006BD19D /* NotificationStore.swift */; };
+		5261257C19B7D580006BD19D /* GifStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5261257B19B7D580006BD19D /* GifStore.swift */; };
 		528CAA1419B6681700FD358E /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528CAA1319B6681700FD358E /* Promise.swift */; };
 		528CAA1619B66FB000FD358E /* AccountStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528CAA1519B66FB000FD358E /* AccountStoreProtocol.swift */; };
 		528CAA1C19B670A600FD358E /* StreamStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528CAA1B19B670A600FD358E /* StreamStoreProtocol.swift */; };
@@ -68,6 +75,13 @@
 		5208940919B6B8F0007E4EEF /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = LInkslap.iOS.Communication/Models/Settings.swift; sourceTree = "<group>"; };
 		5208940B19B6B8F1007E4EEF /* SubscriptionSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriptionSettings.swift; path = LInkslap.iOS.Communication/Models/SubscriptionSettings.swift; sourceTree = "<group>"; };
 		5208941019B6D0D9007E4EEF /* AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppSettings.swift; path = LInkslap.iOS.Communication/Util/AppSettings.swift; sourceTree = "<group>"; };
+		5208941419B77343007E4EEF /* SerializableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SerializableProtocol.swift; path = LInkslap.iOS.Communication/Util/SerializableProtocol.swift; sourceTree = "<group>"; };
+		5261257119B7BCBF006BD19D /* Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Json.swift; path = Promises/Json.swift; sourceTree = "<group>"; };
+		5261257319B7C82D006BD19D /* AccountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountModel.swift; path = LInkslap.iOS.Communication/Models/AccountModel.swift; sourceTree = "<group>"; };
+		5261257419B7C82D006BD19D /* StreamModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StreamModel.swift; path = LInkslap.iOS.Communication/Models/StreamModel.swift; sourceTree = "<group>"; };
+		5261257519B7C82D006BD19D /* SubscriptionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriptionModel.swift; path = LInkslap.iOS.Communication/Models/SubscriptionModel.swift; sourceTree = "<group>"; };
+		5261257919B7D4FC006BD19D /* NotificationStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationStore.swift; path = LInkslap.iOS.Communication/NotificationStore.swift; sourceTree = "<group>"; };
+		5261257B19B7D580006BD19D /* GifStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GifStore.swift; path = LInkslap.iOS.Communication/GifStore.swift; sourceTree = "<group>"; };
 		528CAA1319B6681700FD358E /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Promise.swift; path = Promises/Promise.swift; sourceTree = "<group>"; };
 		528CAA1519B66FB000FD358E /* AccountStoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountStoreProtocol.swift; path = LInkslap.iOS.Communication/Protocols/AccountStoreProtocol.swift; sourceTree = "<group>"; };
 		528CAA1B19B670A600FD358E /* StreamStoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StreamStoreProtocol.swift; path = LInkslap.iOS.Communication/Protocols/StreamStoreProtocol.swift; sourceTree = "<group>"; };
@@ -116,29 +130,24 @@
 				520893F819B6925E007E4EEF /* CoreDataStore.swift */,
 				528CAA2C19B6789900FD358E /* Storage.swift */,
 				520893FA19B692B0007E4EEF /* CoreDataHelper.swift */,
+				5208941419B77343007E4EEF /* SerializableProtocol.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
 		};
-		5208940D19B6BDE9007E4EEF /* Mapping */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Mapping;
-			sourceTree = "<group>";
-		};
-		528CAA1219B667EA00FD358E /* Promises */ = {
+		528CAA1219B667EA00FD358E /* Util */ = {
 			isa = PBXGroup;
 			children = (
 				528CAA1319B6681700FD358E /* Promise.swift */,
+				5261257119B7BCBF006BD19D /* Json.swift */,
 			);
-			name = Promises;
+			name = Util;
 			sourceTree = "<group>";
 		};
 		52A8FCE719A7BA4500EFE697 = {
 			isa = PBXGroup;
 			children = (
-				528CAA1219B667EA00FD358E /* Promises */,
+				528CAA1219B667EA00FD358E /* Util */,
 				52A8FD1619A7BA5500EFE697 /* Linkslap.iOS.Communication */,
 				52A8FCF219A7BA4500EFE697 /* Linkslap.iOS */,
 				52A8FD0919A7BA4600EFE697 /* Linkslap.iOSTests */,
@@ -158,7 +167,6 @@
 		52A8FCF219A7BA4500EFE697 /* Linkslap.iOS */ = {
 			isa = PBXGroup;
 			children = (
-				5208940D19B6BDE9007E4EEF /* Mapping */,
 				52A8FCF519A7BA4500EFE697 /* AppDelegate.swift */,
 				52A8FCF719A7BA4600EFE697 /* RootViewController.swift */,
 				52A8FCF919A7BA4600EFE697 /* DataViewController.swift */,
@@ -204,6 +212,8 @@
 				52A8FD6E19A7C50B00EFE697 /* Protocols */,
 				52A8FD1719A7BA7200EFE697 /* Models */,
 				528CAA2519B6754900FD358E /* AccountStore.swift */,
+				5261257B19B7D580006BD19D /* GifStore.swift */,
+				5261257919B7D4FC006BD19D /* NotificationStore.swift */,
 				528CAA2719B6767C00FD358E /* Rest.swift */,
 			);
 			name = Linkslap.iOS.Communication;
@@ -213,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				520893BF19B68E07007E4EEF /* Account.swift */,
+				5261257319B7C82D006BD19D /* AccountModel.swift */,
 				520893FD19B6991A007E4EEF /* GifMeModel.swift */,
 				520893B919B68E07007E4EEF /* Link.swift */,
 				520893FE19B6991A007E4EEF /* LinkModel.swift */,
@@ -220,8 +231,10 @@
 				5208940019B6991A007E4EEF /* RegisterModel.swift */,
 				5208940219B6991A007E4EEF /* UserInfo.swift */,
 				520893BD19B68E07007E4EEF /* Stream.swift */,
+				5261257419B7C82D006BD19D /* StreamModel.swift */,
 				5208940919B6B8F0007E4EEF /* Settings.swift */,
 				520893BB19B68E07007E4EEF /* Subscription.swift */,
+				5261257519B7C82D006BD19D /* SubscriptionModel.swift */,
 				5208940B19B6B8F1007E4EEF /* SubscriptionSettings.swift */,
 			);
 			name = Models;
@@ -341,6 +354,8 @@
 			files = (
 				520893BC19B68E07007E4EEF /* Subscription.swift in Sources */,
 				528CAA1E19B6714600FD358E /* GifStoreProtocol.swift in Sources */,
+				5261257819B7C82D006BD19D /* SubscriptionModel.swift in Sources */,
+				5261257219B7BCBF006BD19D /* Json.swift in Sources */,
 				528CAA2D19B6789900FD358E /* Storage.swift in Sources */,
 				520893FB19B692B0007E4EEF /* CoreDataHelper.swift in Sources */,
 				5208940519B6991A007E4EEF /* PushRegistration.swift in Sources */,
@@ -349,14 +364,19 @@
 				528CAA1C19B670A600FD358E /* StreamStoreProtocol.swift in Sources */,
 				52A8FCF819A7BA4600EFE697 /* RootViewController.swift in Sources */,
 				520893BE19B68E07007E4EEF /* Stream.swift in Sources */,
+				5261257619B7C82D006BD19D /* AccountModel.swift in Sources */,
 				5208941119B6D0D9007E4EEF /* AppSettings.swift in Sources */,
 				52A8FCFC19A7BA4600EFE697 /* ModelController.swift in Sources */,
 				528CAA2219B673E700FD358E /* SettingsStoreProtocol.swift in Sources */,
+				5261257C19B7D580006BD19D /* GifStore.swift in Sources */,
+				5261257A19B7D4FC006BD19D /* NotificationStore.swift in Sources */,
 				528CAA1419B6681700FD358E /* Promise.swift in Sources */,
 				5208940319B6991A007E4EEF /* GifMeModel.swift in Sources */,
 				528CAA2419B674A300FD358E /* SubscriptionStoreProtocol.swift in Sources */,
 				528CAA2819B6767C00FD358E /* Rest.swift in Sources */,
 				5208940619B6991A007E4EEF /* RegisterModel.swift in Sources */,
+				5261257719B7C82D006BD19D /* StreamModel.swift in Sources */,
+				5208941519B77343007E4EEF /* SerializableProtocol.swift in Sources */,
 				520893B819B68CFA007E4EEF /* Linkslap.xcdatamodeld in Sources */,
 				520893F919B6925E007E4EEF /* CoreDataStore.swift in Sources */,
 				528CAA1619B66FB000FD358E /* AccountStoreProtocol.swift in Sources */,
@@ -487,6 +507,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Linkslap.iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Linkslap.iOS/Linkslap.iOS-Bridging-Header.h";
@@ -501,6 +522,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Linkslap.iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Linkslap.iOS/Linkslap.iOS-Bridging-Header.h";
