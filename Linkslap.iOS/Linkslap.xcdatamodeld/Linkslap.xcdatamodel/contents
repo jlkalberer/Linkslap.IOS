@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6220.14" systemVersion="13E28" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Account" representedClassName="Account" syncable="YES">
+        <attribute name="bearerToken" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tokenExpires" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="tokenIssued" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Link" representedClassName="Link" syncable="YES">
+        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="streamKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="streamName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Settings" representedClassName="Settings" syncable="YES">
+        <attribute name="disableAllNotifications" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="installationId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="newUser" optional="YES" attributeType="Boolean" syncable="YES"/>
+    </entity>
+    <entity name="Stream" representedClassName="Stream" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Subscription" representedClassName="Subscription" syncable="YES">
+        <attribute name="administrate" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="read" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="write" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="stream" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Stream" syncable="YES"/>
+    </entity>
+    <entity name="SubscriptionSettings" representedClassName="SubscriptionSettings" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="showNewLinks" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="streamKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="streamName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="toastNotifications" optional="YES" attributeType="Boolean" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Account" positionX="-45" positionY="63" width="128" height="135"/>
+        <element name="Link" positionX="-36" positionY="99" width="128" height="148"/>
+        <element name="Stream" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="Subscription" positionX="-54" positionY="18" width="128" height="118"/>
+        <element name="Settings" positionX="0" positionY="144" width="128" height="88"/>
+        <element name="SubscriptionSettings" positionX="-36" positionY="90" width="128" height="118"/>
+    </elements>
+</model>

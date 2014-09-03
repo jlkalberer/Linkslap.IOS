@@ -1,5 +1,5 @@
 //
-//  IStreamStore.swift
+//  Stream.swift
 //  Linkslap.iOS
 //
 //  Created by John Kalberer on 8/22/14.
@@ -8,6 +8,8 @@
 
 import Foundation
 
-public protocol StreamStoreProtocol {
-    
+public class Stream {
+    public var id : Int?
+    public var name : String?
+    public var key : String?
 }

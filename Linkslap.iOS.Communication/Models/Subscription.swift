@@ -2,16 +2,20 @@
 //  Subscription.swift
 //  Linkslap.iOS
 //
-//  Created by John Kalberer on 8/22/14.
+//  Created by John Kalberer on 9/2/14.
 //  Copyright (c) 2014 Linkslap. All rights reserved.
 //
 
 import Foundation
+import CoreData
 
-public class Subscription {
-    public var id : Int?
-    public var stream : Stream?
-    public var administrate : Bool = false
-    public var read : Bool = false
-    public var write : Bool = false
+@objc(Subscription)
+public class Subscription: NSManagedObject {
+
+    @NSManaged var id: NSNumber
+    @NSManaged var administrate: NSNumber
+    @NSManaged var read: NSNumber
+    @NSManaged var write: NSNumber
+    @NSManaged var stream: NSManagedObject
+
 }

@@ -2,14 +2,18 @@
 //  Stream.swift
 //  Linkslap.iOS
 //
-//  Created by John Kalberer on 8/22/14.
+//  Created by John Kalberer on 9/2/14.
 //  Copyright (c) 2014 Linkslap. All rights reserved.
 //
 
 import Foundation
+import CoreData
 
-public class Stream {
-    public var id : Int?
-    public var name : String?
-    public var key : String?
+@objc(Stream)
+public class Stream: NSManagedObject {
+
+    @NSManaged var id: NSNumber
+    @NSManaged var name: String
+    @NSManaged var key: String
+
 }
