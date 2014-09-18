@@ -242,6 +242,10 @@ extension JSON {
             var output = dateFormatter.dateFromString(dateString)
             
             if (output == nil) {
+                dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+                output = dateFormatter.dateFromString(dateString)
+            }
+            if (output == nil) {
                 dateFormatter.dateFormat = "EEE, dd MMM yyyy HH:mm:ss z"
                 output = dateFormatter.dateFromString(dateString)
             }

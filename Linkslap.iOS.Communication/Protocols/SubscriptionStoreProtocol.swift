@@ -9,7 +9,7 @@
 import Foundation
 
 public protocol SubscriptionStoreProtocol {
-    func getSubscriptions() -> Promise<SubscriptionModelCollection>
+    func getSubscriptions() -> Promise<[Subscription]>
     func add(streamKey : String) -> Promise<Subscription>
     func delete(streamKey : String) -> Void
     func getSubscription(id : Int) -> Subscription?

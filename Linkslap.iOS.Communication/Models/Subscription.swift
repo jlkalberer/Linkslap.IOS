@@ -16,6 +16,6 @@ public class Subscription: NSManagedObject {
     @NSManaged var administrate: NSNumber
     @NSManaged var read: NSNumber
     @NSManaged var write: NSNumber
-    @NSManaged var stream: NSManagedObject
+    @NSManaged var stream: Stream
 
 }

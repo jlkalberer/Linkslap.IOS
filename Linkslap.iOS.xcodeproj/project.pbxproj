@@ -50,6 +50,9 @@
 		52FE0A9719C932B900C4D75D /* StreamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FE0A9619C932B900C4D75D /* StreamsViewController.swift */; };
 		52FE0A9919C9330200C4D75D /* SubscriptionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FE0A9819C9330200C4D75D /* SubscriptionStore.swift */; };
 		52FE0A9B19C93A5600C4D75D /* SubscriptionModelCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FE0A9A19C93A5600C4D75D /* SubscriptionModelCollection.swift */; };
+		52FE0A9F19CA8A5300C4D75D /* ViewStreamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FE0A9E19CA8A5300C4D75D /* ViewStreamController.swift */; };
+		52FE0AA119CA8B5400C4D75D /* StreamStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FE0AA019CA8B5400C4D75D /* StreamStore.swift */; };
+		52FE0AA319CA8C7A00C4D75D /* LinkCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FE0AA219CA8C7A00C4D75D /* LinkCollection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +114,9 @@
 		52FE0A9619C932B900C4D75D /* StreamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StreamsViewController.swift; path = Controllers/StreamsViewController.swift; sourceTree = "<group>"; };
 		52FE0A9819C9330200C4D75D /* SubscriptionStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriptionStore.swift; path = LInkslap.iOS.Communication/SubscriptionStore.swift; sourceTree = "<group>"; };
 		52FE0A9A19C93A5600C4D75D /* SubscriptionModelCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriptionModelCollection.swift; path = LInkslap.iOS.Communication/Models/SubscriptionModelCollection.swift; sourceTree = "<group>"; };
+		52FE0A9E19CA8A5300C4D75D /* ViewStreamController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewStreamController.swift; path = Controllers/ViewStreamController.swift; sourceTree = "<group>"; };
+		52FE0AA019CA8B5400C4D75D /* StreamStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StreamStore.swift; path = LInkslap.iOS.Communication/StreamStore.swift; sourceTree = "<group>"; };
+		52FE0AA219CA8C7A00C4D75D /* LinkCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinkCollection.swift; path = LInkslap.iOS.Communication/Models/LinkCollection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +229,7 @@
 				5261257919B7D4FC006BD19D /* NotificationStore.swift */,
 				528CAA2719B6767C00FD358E /* Rest.swift */,
 				5261257D19B7DA7E006BD19D /* NewSlapStore.swift */,
+				52FE0AA019CA8B5400C4D75D /* StreamStore.swift */,
 				52FE0A9819C9330200C4D75D /* SubscriptionStore.swift */,
 			);
 			name = Linkslap.iOS.Communication;
@@ -235,6 +242,7 @@
 				5261257319B7C82D006BD19D /* AccountModel.swift */,
 				520893FD19B6991A007E4EEF /* GifMeModel.swift */,
 				520893B919B68E07007E4EEF /* Link.swift */,
+				52FE0AA219CA8C7A00C4D75D /* LinkCollection.swift */,
 				520893FE19B6991A007E4EEF /* LinkModel.swift */,
 				520893FF19B6991A007E4EEF /* PushRegistration.swift */,
 				5208940019B6991A007E4EEF /* RegisterModel.swift */,
@@ -269,6 +277,7 @@
 				52C6A02719C8CBF700CE31B4 /* LoginViewController.swift */,
 				52C6A0C319C8F17D00CE31B4 /* AppViewController.swift */,
 				52FE0A9619C932B900C4D75D /* StreamsViewController.swift */,
+				52FE0A9E19CA8A5300C4D75D /* ViewStreamController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -385,6 +394,7 @@
 				5261257819B7C82D006BD19D /* SubscriptionModel.swift in Sources */,
 				5261257219B7BCBF006BD19D /* Json.swift in Sources */,
 				52C6A02819C8CBF700CE31B4 /* LoginViewController.swift in Sources */,
+				52FE0AA119CA8B5400C4D75D /* StreamStore.swift in Sources */,
 				528CAA2D19B6789900FD358E /* Storage.swift in Sources */,
 				520893FB19B692B0007E4EEF /* CoreDataHelper.swift in Sources */,
 				52C6A09119C8E60E00CE31B4 /* NavigationHelper.swift in Sources */,
@@ -409,7 +419,9 @@
 				5208940619B6991A007E4EEF /* RegisterModel.swift in Sources */,
 				5261257719B7C82D006BD19D /* StreamModel.swift in Sources */,
 				5208941519B77343007E4EEF /* SerializableProtocol.swift in Sources */,
+				52FE0AA319CA8C7A00C4D75D /* LinkCollection.swift in Sources */,
 				520893B819B68CFA007E4EEF /* Linkslap.xcdatamodeld in Sources */,
+				52FE0A9F19CA8A5300C4D75D /* ViewStreamController.swift in Sources */,
 				520893F919B6925E007E4EEF /* CoreDataStore.swift in Sources */,
 				528CAA1619B66FB000FD358E /* AccountStoreProtocol.swift in Sources */,
 				528CAA2619B6754900FD358E /* AccountStore.swift in Sources */,

@@ -105,13 +105,13 @@ public class Promise<TModel> {
     // This allows users of our Promise library to have access to the Promise object,
     // so that they can reject a Promise within their then() clauses. Not the cleanest
     // way, but hey, this whole thing is a proof of concept, right? :)
-    func then(callback: ((promise: Promise<TModel>) -> ())) -> Promise<TModel> {
+    /*func then(callback: ((promise: Promise<TModel>) -> ())) -> Promise<TModel> {
         func thenWrapper(value : TModel) -> () {
             callback(promise: self)
         }
         self.pending.append(thenWrapper)
         return self
-    }
+    }*/
     
     // Fail method.
     //

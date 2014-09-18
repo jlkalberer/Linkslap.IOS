@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Linkslap.iOS/Utils/NavigationHelper.swift"
-            timestampString = "432603541.661754"
+            timestampString = "432693861.944178"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
             landmarkName = "setStoryBoard(_:navigationController:)"
             landmarkType = "5">
          </BreakpointContent>
