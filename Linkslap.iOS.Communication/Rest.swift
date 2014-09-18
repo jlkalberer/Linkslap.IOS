@@ -32,27 +32,27 @@ public class Rest {
         public func fromJson(json: JSON) { }
     }
     
-    public func get<TModel : SerializableProtocol>(resource: NSString, parameters: JSON? = nil) -> Promise<TModel> {
+    public func get<TModel : SerializableProtocol>(resource: String, parameters: JSON? = nil) -> Promise<TModel> {
         return execute("GET", resource: resource, parameters: parameters)
     }
-    public func post<TModel : SerializableProtocol>(resource: NSString, parameters: JSON? = nil) -> Promise<TModel> {
+    public func post<TModel : SerializableProtocol>(resource: String, parameters: JSON? = nil) -> Promise<TModel> {
         return execute("POST", resource: resource, parameters: parameters)
     }
-    public func put<TModel : SerializableProtocol>(resource: NSString, parameters: JSON? = nil) -> Promise<TModel> {
+    public func put<TModel : SerializableProtocol>(resource: String, parameters: JSON? = nil) -> Promise<TModel> {
         return execute("PUT", resource: resource, parameters: parameters)
     }
-    public func delete<TModel : SerializableProtocol>(resource: NSString) -> Promise<TModel> {
+    public func delete<TModel : SerializableProtocol>(resource: String) -> Promise<TModel> {
         return execute("DELETE", resource: resource, parameters: nil)
     }
     
-    public func execute<TModel : SerializableProtocol>(method: NSString, resource: NSString, parameters: JSON? = nil) -> Promise<TModel> {
+    public func execute<TModel : SerializableProtocol>(method: String, resource: NSString, parameters: JSON? = nil) -> Promise<TModel> {
         var request: NSMutableURLRequest = NSMutableURLRequest()
         request.HTTPMethod = method;
         
-        return Promise<TModel>.defer() // executeRequest(request, resource: resource, parameters: parameters)
+        return execute(request, resource: resource, parameters: parameters)
     }
     
-    public func execute<TModel : SerializableProtocol>(request: NSMutableURLRequest, resource: NSString, parameters: JSON?) -> Promise<TModel> {
+    public func execute<TModel : SerializableProtocol>(request: NSMutableURLRequest, resource: String, parameters: JSON?) -> Promise<TModel> {
         var promise = Promise<TModel>.defer();
         var error: NSError?
         
@@ -68,20 +68,30 @@ public class Rest {
             }
         }
         
-        if (bearerToken != nil && bearerToken!.isEmpty) {
-            request.setValue("Bearer \(bearerToken)", forHTTPHeaderField: "Authorization")
+        if (bearerToken != nil && !bearerToken!.isEmpty) {
+            request.setValue("Bearer \(bearerToken!)", forHTTPHeaderField: "Authorization")
         }
         
         if (error != nil) {
-            promise.reject(error!)
-            promise.resolve(nil)
+            var errorString:String = error?.localizedDescription ?? ""
+            var errorDescription:String = error?.localizedFailureReason ?? ""
+            
+            let values:[String:AnyObject] = [
+                "error": errorString,
+                "errorDescription": errorDescription
+            ]
+            
+            promise.reject(JSON(values))
+            
             return promise
         }
         
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue(), completionHandler: { (response:NSURLResponse!, data: NSData!, error: NSError!) -> Void in
             if (error != nil) {
-                promise.reject(error)
-                promise.resolve(nil)
+                var jsonString = NSString(data: data!, encoding: NSUTF8StringEncoding)
+                
+                promise.reject(JSON.parse(jsonString))
+                
                 return
             }
             
@@ -89,11 +99,23 @@ public class Rest {
             if (data != nil) {
                 var jsonString = NSString(data: data!, encoding: NSUTF8StringEncoding)
                 var model = TModel()
-                model.fromJson(JSON.parse(jsonString))
+                
+                var json = JSON.parse(jsonString);
+                
+                if (json["error"].asString != nil) {
+                    promise.reject(json)
+                    
+                    return;
+                }
+                
+                model.fromJson(json)
                 promise.resolve(model)
             } else {
-                promise.reject(error!)
-                promise.resolve(nil)
+                let values:[String:AnyObject] = [
+                    "error" : "Empty response"
+                ]
+                
+                promise.reject(JSON(values))
             }
         })
         

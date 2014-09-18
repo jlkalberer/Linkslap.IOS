@@ -9,7 +9,7 @@
 import Foundation
 
 public struct AppSettings {
-    public static let baseUrl = "http://linkslap.me/"
+    public static let baseUrl = "https://linkslap.me/"
     public static let hubConnectionString = ""
     public static let hubNotificationPath = "linkslap1"
 }

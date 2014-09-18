@@ -239,9 +239,17 @@ extension JSON {
         if let dateString = _value as? NSString {
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZ"
-            return dateFormatter.dateFromString(dateString)
+            var output = dateFormatter.dateFromString(dateString)
+            
+            if (output == nil) {
+                dateFormatter.dateFormat = "EEE, dd MMM yyyy HH:mm:ss z"
+                output = dateFormatter.dateFromString(dateString)
             }
-            return nil
+            
+            return output
+        }
+        
+        return nil
     }
     /// gives the number of elements if an array or a dictionary.
     /// you can use this to check if you can iterate.

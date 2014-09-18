@@ -26,19 +26,14 @@ public class AccountStore : AccountStoreProtocol {
         var promise = Promise<Account>.defer()
         var restPromise:Promise<AccountModel> = rest.execute(request, resource: "token", parameters: nil)
         
-        restPromise.then { (value:AccountModel?) -> () in
-            if(value == nil) {
-                promise.fail(error: NSError())
-                return
-            }
-            
+        restPromise.then { (value:AccountModel) -> () in
             var account:Account = self.cdh.create(Storage.accountKey)
-            account.id = value!.id!
-            account.userName = value!.userName!
-            account.email = value!.id? ?? ""
-            account.bearerToken = value!.bearerToken!
-            account.tokenIssued = value!.tokenIssued!
-            account.tokenExpires = value!.tokenExpires!
+            account.id = value.id!
+            account.userName = value.userName!
+            account.email = value.id? ?? ""
+            account.bearerToken = value.bearerToken!
+            account.tokenIssued = value.tokenIssued!
+            account.tokenExpires = value.tokenExpires!
             
             self.cdh.saveContext()
             
@@ -58,7 +53,7 @@ public class AccountStore : AccountStoreProtocol {
         var rest = Rest()
         var p:Promise<Rest.NoData> = rest.post("/api/account/register", parameters: user.toJson())
         
-        p.then { (value: Rest.NoData?) -> () in
+        p.then { (value: Rest.NoData) -> () in
             promise.resolve(1)
         }.fail { (error) -> () in
             promise.reject(error)
@@ -83,7 +78,7 @@ public class AccountStore : AccountStoreProtocol {
         
         var p:Promise<Rest.NoData> = rest.post("/api/account/resetpassword", parameters: JSON(json))
         
-        p.then { (value:Rest.NoData?) in
+        p.then { (value:Rest.NoData) in
             promise.resolve(true)
         }.fail { (error) in
             promise.reject(error)

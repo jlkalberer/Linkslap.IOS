@@ -28,5 +28,4 @@ public class AccountModel: SerializableProtocol {
         tokenIssued = json[".issued"].asDate
         tokenExpires = json[".expires"].asDate
     }
-
 }

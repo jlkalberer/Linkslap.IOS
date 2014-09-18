@@ -8,12 +8,22 @@
 
 import Foundation
 
-public class SubscriptionModel {
+public class SubscriptionModel : SerializableProtocol {
+    required public init () { }
+    
+    var id: Int!
+    var administrate: Bool!
+    var read: Bool!
+    var write: Bool!
+    var stream: StreamModel!
 
-    var id: NSNumber?
-    var administrate: NSNumber?
-    var read: NSNumber?
-    var write: NSNumber?
-    var stream: StreamModel?
-
+    public func fromJson(json: JSON) {
+        id = json["id"].asInt
+        administrate = json["administrate"].asBool
+        read = json["read"].asBool
+        write = json["write"].asBool
+        
+        stream = StreamModel()
+        stream.fromJson(json["stream"])
+    }
 }

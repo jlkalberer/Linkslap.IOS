@@ -8,10 +8,16 @@
 
 import Foundation
 
-public class StreamModel {
+public class StreamModel :SerializableProtocol {
+    required public init () { }
+    
+    var id: NSNumber!
+    var name: String!
+    var key: String!
 
-    var id: NSNumber?
-    var name: String?
-    var key: String?
-
+    public func fromJson(json: JSON) {
+        id = json["id"].asInt
+        name = json["name"].asString
+        key = json["key"].asString
+    }
 }

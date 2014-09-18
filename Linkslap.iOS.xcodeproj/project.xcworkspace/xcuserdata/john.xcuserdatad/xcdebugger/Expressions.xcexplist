@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "Linkslap_iOS.Rest.execute (Linkslap_iOS.Rest)&lt;A : Linkslap_iOS.SerializableProtocol&gt;(ObjectiveC.NSMutableURLRequest, resource : Swift.String, parameters : Swift.Optional&lt;Linkslap_iOS.JSON&gt;) -&gt; Linkslap_iOS.Promise&lt;A&gt;:Rest.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Linkslap_iOS.SubscriptionModelCollection.fromJson (Linkslap_iOS.SubscriptionModelCollection)(Linkslap_iOS.JSON) -&gt; ():SubscriptionModelCollection.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "()[0]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Linkslap_iOS.AccountStore.(authenticate (Linkslap_iOS.AccountStore) -&gt; (Swift.String, password : Swift.String) -&gt; Linkslap_iOS.Promise&lt;Linkslap_iOS.Account&gt;).(closure #1) with unmangled suffix &quot;_promote0&quot;:AccountStore.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Linkslap_iOS.AccountModel.fromJson (Linkslap_iOS.AccountModel)(Linkslap_iOS.JSON) -&gt; ():AccountModel.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Linkslap_iOS.Rest.(execute (Linkslap_iOS.Rest) -&gt; &lt;A : Linkslap_iOS.SerializableProtocol&gt;(ObjectiveC.NSMutableURLRequest, resource : Swift.String, parameters : Swift.Optional&lt;Linkslap_iOS.JSON&gt;) -&gt; Linkslap_iOS.Promise&lt;A&gt;).(closure #1):Rest.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

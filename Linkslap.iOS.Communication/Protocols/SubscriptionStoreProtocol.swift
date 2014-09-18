@@ -9,9 +9,9 @@
 import Foundation
 
 public protocol SubscriptionStoreProtocol {
-    func getSubscriptions() -> Promise<[Subscription]>
+    func getSubscriptions() -> Promise<SubscriptionModelCollection>
     func add(streamKey : String) -> Promise<Subscription>
     func delete(streamKey : String) -> Void
-    func getSubscription(id : Int) -> Subscription
-    func getSubscription(streamKey : String) -> Subscription
+    func getSubscription(id : Int) -> Subscription?
+    func getSubscription(streamKey : String) -> Subscription?
 }

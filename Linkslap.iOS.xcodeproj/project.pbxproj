@@ -29,6 +29,7 @@
 		5261257819B7C82D006BD19D /* SubscriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5261257519B7C82D006BD19D /* SubscriptionModel.swift */; };
 		5261257A19B7D4FC006BD19D /* NotificationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5261257919B7D4FC006BD19D /* NotificationStore.swift */; };
 		5261257C19B7D580006BD19D /* GifStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5261257B19B7D580006BD19D /* GifStore.swift */; };
+		5261257E19B7DA7E006BD19D /* NewSlapStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5261257D19B7DA7E006BD19D /* NewSlapStore.swift */; };
 		528CAA1419B6681700FD358E /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528CAA1319B6681700FD358E /* Promise.swift */; };
 		528CAA1619B66FB000FD358E /* AccountStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528CAA1519B66FB000FD358E /* AccountStoreProtocol.swift */; };
 		528CAA1C19B670A600FD358E /* StreamStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528CAA1B19B670A600FD358E /* StreamStoreProtocol.swift */; };
@@ -40,12 +41,15 @@
 		528CAA2819B6767C00FD358E /* Rest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528CAA2719B6767C00FD358E /* Rest.swift */; };
 		528CAA2D19B6789900FD358E /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528CAA2C19B6789900FD358E /* Storage.swift */; };
 		52A8FCF619A7BA4500EFE697 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8FCF519A7BA4500EFE697 /* AppDelegate.swift */; };
-		52A8FCF819A7BA4600EFE697 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8FCF719A7BA4600EFE697 /* RootViewController.swift */; };
-		52A8FCFA19A7BA4600EFE697 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8FCF919A7BA4600EFE697 /* DataViewController.swift */; };
-		52A8FCFC19A7BA4600EFE697 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8FCFB19A7BA4600EFE697 /* ModelController.swift */; };
 		52A8FCFF19A7BA4600EFE697 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52A8FCFD19A7BA4600EFE697 /* Main.storyboard */; };
 		52A8FD0119A7BA4600EFE697 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52A8FD0019A7BA4600EFE697 /* Images.xcassets */; };
 		52A8FD0D19A7BA4600EFE697 /* Linkslap_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8FD0C19A7BA4600EFE697 /* Linkslap_iOSTests.swift */; };
+		52C6A02819C8CBF700CE31B4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6A02719C8CBF700CE31B4 /* LoginViewController.swift */; };
+		52C6A09119C8E60E00CE31B4 /* NavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6A09019C8E60E00CE31B4 /* NavigationHelper.swift */; };
+		52C6A0C419C8F17D00CE31B4 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6A0C319C8F17D00CE31B4 /* AppViewController.swift */; };
+		52FE0A9719C932B900C4D75D /* StreamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FE0A9619C932B900C4D75D /* StreamsViewController.swift */; };
+		52FE0A9919C9330200C4D75D /* SubscriptionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FE0A9819C9330200C4D75D /* SubscriptionStore.swift */; };
+		52FE0A9B19C93A5600C4D75D /* SubscriptionModelCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FE0A9A19C93A5600C4D75D /* SubscriptionModelCollection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +86,7 @@
 		5261257519B7C82D006BD19D /* SubscriptionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriptionModel.swift; path = LInkslap.iOS.Communication/Models/SubscriptionModel.swift; sourceTree = "<group>"; };
 		5261257919B7D4FC006BD19D /* NotificationStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationStore.swift; path = LInkslap.iOS.Communication/NotificationStore.swift; sourceTree = "<group>"; };
 		5261257B19B7D580006BD19D /* GifStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GifStore.swift; path = LInkslap.iOS.Communication/GifStore.swift; sourceTree = "<group>"; };
+		5261257D19B7DA7E006BD19D /* NewSlapStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewSlapStore.swift; path = LInkslap.iOS.Communication/NewSlapStore.swift; sourceTree = "<group>"; };
 		528CAA1319B6681700FD358E /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Promise.swift; path = Promises/Promise.swift; sourceTree = "<group>"; };
 		528CAA1519B66FB000FD358E /* AccountStoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountStoreProtocol.swift; path = LInkslap.iOS.Communication/Protocols/AccountStoreProtocol.swift; sourceTree = "<group>"; };
 		528CAA1B19B670A600FD358E /* StreamStoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StreamStoreProtocol.swift; path = LInkslap.iOS.Communication/Protocols/StreamStoreProtocol.swift; sourceTree = "<group>"; };
@@ -95,14 +100,17 @@
 		52A8FCF019A7BA4500EFE697 /* Linkslap.iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Linkslap.iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A8FCF419A7BA4500EFE697 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52A8FCF519A7BA4500EFE697 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		52A8FCF719A7BA4600EFE697 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		52A8FCF919A7BA4600EFE697 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
-		52A8FCFB19A7BA4600EFE697 /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
 		52A8FCFE19A7BA4600EFE697 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52A8FD0019A7BA4600EFE697 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		52A8FD0619A7BA4600EFE697 /* Linkslap.iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Linkslap.iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A8FD0B19A7BA4600EFE697 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52A8FD0C19A7BA4600EFE697 /* Linkslap_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Linkslap_iOSTests.swift; sourceTree = "<group>"; };
+		52C6A02719C8CBF700CE31B4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
+		52C6A09019C8E60E00CE31B4 /* NavigationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationHelper.swift; path = Utils/NavigationHelper.swift; sourceTree = "<group>"; };
+		52C6A0C319C8F17D00CE31B4 /* AppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppViewController.swift; path = Controllers/AppViewController.swift; sourceTree = "<group>"; };
+		52FE0A9619C932B900C4D75D /* StreamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StreamsViewController.swift; path = Controllers/StreamsViewController.swift; sourceTree = "<group>"; };
+		52FE0A9819C9330200C4D75D /* SubscriptionStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriptionStore.swift; path = LInkslap.iOS.Communication/SubscriptionStore.swift; sourceTree = "<group>"; };
+		52FE0A9A19C93A5600C4D75D /* SubscriptionModelCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriptionModelCollection.swift; path = LInkslap.iOS.Communication/Models/SubscriptionModelCollection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,10 +175,9 @@
 		52A8FCF219A7BA4500EFE697 /* Linkslap.iOS */ = {
 			isa = PBXGroup;
 			children = (
+				52C6A08F19C8E5AC00CE31B4 /* Utils */,
+				52C6A01F19C8C16E00CE31B4 /* Controllers */,
 				52A8FCF519A7BA4500EFE697 /* AppDelegate.swift */,
-				52A8FCF719A7BA4600EFE697 /* RootViewController.swift */,
-				52A8FCF919A7BA4600EFE697 /* DataViewController.swift */,
-				52A8FCFB19A7BA4600EFE697 /* ModelController.swift */,
 				52A8FCFD19A7BA4600EFE697 /* Main.storyboard */,
 				52A8FD0019A7BA4600EFE697 /* Images.xcassets */,
 				52A8FCF319A7BA4500EFE697 /* Supporting Files */,
@@ -215,6 +222,8 @@
 				5261257B19B7D580006BD19D /* GifStore.swift */,
 				5261257919B7D4FC006BD19D /* NotificationStore.swift */,
 				528CAA2719B6767C00FD358E /* Rest.swift */,
+				5261257D19B7DA7E006BD19D /* NewSlapStore.swift */,
+				52FE0A9819C9330200C4D75D /* SubscriptionStore.swift */,
 			);
 			name = Linkslap.iOS.Communication;
 			sourceTree = "<group>";
@@ -236,6 +245,7 @@
 				520893BB19B68E07007E4EEF /* Subscription.swift */,
 				5261257519B7C82D006BD19D /* SubscriptionModel.swift */,
 				5208940B19B6B8F1007E4EEF /* SubscriptionSettings.swift */,
+				52FE0A9A19C93A5600C4D75D /* SubscriptionModelCollection.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -251,6 +261,24 @@
 				528CAA2319B674A300FD358E /* SubscriptionStoreProtocol.swift */,
 			);
 			name = Protocols;
+			sourceTree = "<group>";
+		};
+		52C6A01F19C8C16E00CE31B4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				52C6A02719C8CBF700CE31B4 /* LoginViewController.swift */,
+				52C6A0C319C8F17D00CE31B4 /* AppViewController.swift */,
+				52FE0A9619C932B900C4D75D /* StreamsViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		52C6A08F19C8E5AC00CE31B4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				52C6A09019C8E60E00CE31B4 /* NavigationHelper.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,17 +384,21 @@
 				528CAA1E19B6714600FD358E /* GifStoreProtocol.swift in Sources */,
 				5261257819B7C82D006BD19D /* SubscriptionModel.swift in Sources */,
 				5261257219B7BCBF006BD19D /* Json.swift in Sources */,
+				52C6A02819C8CBF700CE31B4 /* LoginViewController.swift in Sources */,
 				528CAA2D19B6789900FD358E /* Storage.swift in Sources */,
 				520893FB19B692B0007E4EEF /* CoreDataHelper.swift in Sources */,
+				52C6A09119C8E60E00CE31B4 /* NavigationHelper.swift in Sources */,
 				5208940519B6991A007E4EEF /* PushRegistration.swift in Sources */,
+				52FE0A9B19C93A5600C4D75D /* SubscriptionModelCollection.swift in Sources */,
 				528CAA2019B671E100FD358E /* NewSlapStoreProtocol.swift in Sources */,
+				52C6A0C419C8F17D00CE31B4 /* AppViewController.swift in Sources */,
+				5261257E19B7DA7E006BD19D /* NewSlapStore.swift in Sources */,
 				520893BA19B68E07007E4EEF /* Link.swift in Sources */,
 				528CAA1C19B670A600FD358E /* StreamStoreProtocol.swift in Sources */,
-				52A8FCF819A7BA4600EFE697 /* RootViewController.swift in Sources */,
 				520893BE19B68E07007E4EEF /* Stream.swift in Sources */,
+				52FE0A9919C9330200C4D75D /* SubscriptionStore.swift in Sources */,
 				5261257619B7C82D006BD19D /* AccountModel.swift in Sources */,
 				5208941119B6D0D9007E4EEF /* AppSettings.swift in Sources */,
-				52A8FCFC19A7BA4600EFE697 /* ModelController.swift in Sources */,
 				528CAA2219B673E700FD358E /* SettingsStoreProtocol.swift in Sources */,
 				5261257C19B7D580006BD19D /* GifStore.swift in Sources */,
 				5261257A19B7D4FC006BD19D /* NotificationStore.swift in Sources */,
@@ -381,10 +413,10 @@
 				520893F919B6925E007E4EEF /* CoreDataStore.swift in Sources */,
 				528CAA1619B66FB000FD358E /* AccountStoreProtocol.swift in Sources */,
 				528CAA2619B6754900FD358E /* AccountStore.swift in Sources */,
-				52A8FCFA19A7BA4600EFE697 /* DataViewController.swift in Sources */,
 				520893C019B68E07007E4EEF /* Account.swift in Sources */,
 				5208940C19B6B8F1007E4EEF /* SubscriptionSettings.swift in Sources */,
 				5208940419B6991A007E4EEF /* LinkModel.swift in Sources */,
+				52FE0A9719C932B900C4D75D /* StreamsViewController.swift in Sources */,
 				5208940A19B6B8F1007E4EEF /* Settings.swift in Sources */,
 				5208940819B6991A007E4EEF /* UserInfo.swift in Sources */,
 				52A8FCF619A7BA4500EFE697 /* AppDelegate.swift in Sources */,

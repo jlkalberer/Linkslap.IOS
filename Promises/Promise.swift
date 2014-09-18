@@ -28,18 +28,18 @@ import Foundation
 
 public class Promise<TModel> {
     // An array of callbacks (Void -> Void) to iterate through at resolve time.
-    var pending: [((value : TModel? ) -> ())] = []
+    private var pending: [((value : TModel ) -> ())] = []
     
     // A callback to call when we're completely done.
-    var done: (value : TModel? ) -> () = { value in }
+    private var done: (value : TModel? ) -> () = { value in }
     
     // A callback to invoke in the event of failure.
-    var fail: ((error: NSError) -> ()) = { error in }
+    private var fail: ((error: JSON) -> ()) = { error in }
     
     // A simple way to track rejection.
-    var rejected: Bool = false
+    private var rejected: Bool = false
     
-    var error: NSError?
+    private var error: JSON!
     
     // Class ("static") method to return a new promise.
     class func defer() -> Promise {
@@ -52,38 +52,43 @@ public class Promise<TModel> {
     // invoking each in sequence.
     //
     // Invokes fail callback in case of rejection (and swiftly abandons ship).
-    func resolve(value : TModel?) -> () {
-        func callResolve(value: TModel?) -> () {
+    func resolve(value : TModel) -> () {
+        dispatch_async(dispatch_get_main_queue()) {
             for f in self.pending {
                 if self.rejected {
-                    fail(error: self.error!)
+                    self.fail(error: self.error!)
                     return
                 }
                 f(value: value)
             }
+            
             if self.rejected {
-                fail(error: self.error!)
+                self.fail(error: self.error!)
                 return
             }
-            done(value: value)
+            
+            self.done(value: value)
         }
-
-        callResolve(value)
     }
     
     // Reject method.
     //
     // Sets rejection flag to true to halt execution of subsequent callbacks.
-    func reject(error:NSError) {
+    func reject(error:JSON) {
         self.rejected = true
         self.error = error
+        
+        dispatch_async(dispatch_get_main_queue()) {
+            self.fail(error: self.error!)
+            self.done(value: nil)
+        }
     }
     
     // Then method.
     //
     // This lets us chain callbacks together; it accepts one parameter, a Void -> Void
     // callback - can either be a function itself, or a Swift closure.
-    func then(callback: ((value: TModel?) -> ())) -> Promise {
+    func then(callback: ((value: TModel) -> ())) -> Promise {
         self.pending.append(callback)
         return self
     }
@@ -101,7 +106,7 @@ public class Promise<TModel> {
     // so that they can reject a Promise within their then() clauses. Not the cleanest
     // way, but hey, this whole thing is a proof of concept, right? :)
     func then(callback: ((promise: Promise<TModel>) -> ())) -> Promise<TModel> {
-        func thenWrapper(value : TModel?) -> () {
+        func thenWrapper(value : TModel) -> () {
             callback(promise: self)
         }
         self.pending.append(thenWrapper)
@@ -119,11 +124,13 @@ public class Promise<TModel> {
     //
     // promise.then({}).fail({}).then({}).fail({})
     //
-    func fail(fail: ((error:NSError) -> ())) -> Promise {
+    func fail(fail: ((error:JSON) -> ())) -> Promise {
         self.fail = fail
         let finishablePromise : Promise = self
         return finishablePromise
     }
+    
+    
     
     // Done method.
     //

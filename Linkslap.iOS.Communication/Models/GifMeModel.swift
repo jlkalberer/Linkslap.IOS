@@ -10,7 +10,10 @@
 import Foundation
 
 public class GifMeModel: SerializableProtocol {
-    public required init() { }
+    public required init() {
+        meta = GifMeMeta()
+        results = [GifMeResult]()
+    }
     
     public var status : Int = 0
     public var meta : GifMeMeta
